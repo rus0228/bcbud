@@ -1,1 +1,3 @@
-Explanation can be found in [Laravel: Using Different Table and Guard for Login](https://medium.com/@nasrulhazim/laravel-using-different-table-and-guard-for-login-bc426d067901)
+## BCBUD backend
+
+Host within DO ubuntu20.4 with LEMP stack and NGINX.
