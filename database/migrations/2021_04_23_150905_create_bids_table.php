@@ -23,7 +23,7 @@ class CreateBidsTable extends Migration
             $table->string('paid_by_vips');
             $table->string('paid_manually');
             $table->boolean('ready_for_draw');
-            $table->string('tickets_created');
+            $table->boolean('tickets_created');
             $table->timestamps();
         });
     }

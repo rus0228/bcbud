@@ -159,7 +159,7 @@ class EmployeeController extends Controller
             'paid_by_vips' => $input['paid_by_vips'],
             'paid_manually' => $input['paid_manually'],
             'ready_for_draw' => $input['ready_for_draw'] == '1' ? true : false,
-            'tickets_created' => $input['tickets_created']
+            'tickets_created' => $input['tickets_created'] == '1' ? true : false
         ]);
 
         return redirect('employee/get_bids')

@@ -101,10 +101,25 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="tickets_created" class="col-md-4 col-form-label text-md-right">{{ __('TicketsCreated') }}</label>
-
-                <div class="col-md-6">
-                    <input type="datetime-local" class="form-control" name="tickets_created" required autofocus>
+                <label class="col-sm-4 col-form-label text-right"
+                       style="padding-top: 15px">{{ __('TicketsCreated') }}</label>
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <div class="form-check form-check-radio">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="tickets_created" value="1" required>
+                                Yes
+                                <span class="circle"><span class="check"></span></span>
+                            </label>
+                        </div>
+                        <div class="form-check form-check-radio">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="tickets_created" value="0" required>
+                                No
+                                <span class="circle"><span class="check"></span></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-group row mb-0">
