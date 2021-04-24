@@ -169,4 +169,12 @@ class EmployeeController extends Controller
     public function export_bid(){
         return Excel::download(new BidsExport, 'bids'.time().'.xlsx');
     }
+
+    public function lottery_tickets(){
+        return view('home.lottery_tickets');
+    }
+
+    public function draw_lottery(){
+        return view('home.draw_lottery');
+    }
 }

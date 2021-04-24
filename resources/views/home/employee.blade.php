@@ -34,12 +34,12 @@
                                 </a>
                             </div>
                             <div class="col-md-12 text-center">
-                                <a href="">
+                                <a href="{{route('employee.lottery_tickets')}}">
                                     <h4>Lottery Tickets list</h4>
                                 </a>
                             </div>
                             <div class="col-md-12 text-center">
-                                <a href="">
+                                <a href="{{route('employee.draw_lottery')}}">
                                     <h4>Draw Lottery</h4>
                                 </a>
                             </div>

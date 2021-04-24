@@ -69,6 +69,10 @@ Route::prefix('employee')
         Route::post('add_bid', 'Home\EmployeeController@insert_bid')->name('add_bid');
         Route::get('export_bid', 'Home\EmployeeController@export_bid')->name('export_bid');
 
+
+        Route::get('lottery_tickets', 'Home\EmployeeController@lottery_tickets')->name('lottery_tickets');
+        Route::get('draw_lottery', 'Home\EmployeeController@draw_lottery')->name('draw_lottery');
+
     	Route::namespace('Auth\Login')
     		->group(function() {
     			Route::get('login', 'EmployeeController@showLoginForm')->name('login');
