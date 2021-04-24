@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Imports\CarsImport;
 use App\Models\Bid;
+use App\Models\Bidder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
@@ -31,6 +32,8 @@ class EmployeeController extends Controller
         return view('home.employee');
     }
 
+
+    // Car::
     public function get_open_cars(){
         $cars = DB::table('cars')->get();
         return view('home.cars.index', ['cars' => $cars]);
@@ -41,10 +44,28 @@ class EmployeeController extends Controller
         return back();
     }
 
+
+    // Bidder::
     public function get_bidders(){
         $bidders = DB::table('bidders')->get();
         return view('home.bidders.index', ['bidders' => $bidders]);
     }
+
+    public function add_bidder(){
+        return view('home.bidders.add');
+    }
+
+    public function insert_bidder(Request $request){
+        $input = $request->all();
+        Bidder::create([
+            'name' => $input['name'],
+            'phone_number' => $input['phone_number']
+        ]);
+        return redirect('employee/get_bidders')
+            ->with('status', 'Bidder "' . $input['name'] . '" was just added manually.');
+    }
+
+    // Bid::
 
     public function get_bids(){
         $bids = DB::table('bids')->get();
@@ -71,6 +92,7 @@ class EmployeeController extends Controller
             'tickets_created' => $input['tickets_created']
         ]);
 
-        return 'success';
+        return redirect('employee/get_bids')
+            ->with('status', 'Bid "' . $input['name'] . '" was just added manually.');
     }
 }

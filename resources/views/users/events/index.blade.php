@@ -6,7 +6,11 @@
 
 @section('content')
     <div class="container">
-
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12 text-center">
                 <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm" href="{{route('add_event')}}">
@@ -47,10 +51,12 @@
                             <td>{{$event->lottery_draw_time}}</td>
                             <td>
                                 @if ($event->user_id == auth()->user()->id)
-                                    <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm">
+                                    <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm"
+                                       href="{{route('edit_event', ['id' => $event->id])}}">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                    <a type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"
+                                       href="{{route('delete_event', ['id' => $event->id])}}">
                                         <i class="material-icons">remove</i>
                                     </a>
                                 @endif

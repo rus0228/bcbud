@@ -6,7 +6,11 @@
 
 @section('content')
     <div class="container">
-
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12 text-center">
                 <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm" href="{{route('add_employee')}}">
@@ -36,11 +40,13 @@
                             <td>{{$employee->code}}</td>
                             <td>{{$employee->code_valid_to}}</td>
                             <td>
-                                <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm">
+                                <a class="btn btn-primary btn-link btn-sm"
+                                   href="{{route('edit_employee', ['id' => $employee->id])}}">
                                     <i class="material-icons">edit</i>
                                 </a>
-                                <a type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                                    <i class="material-icons">close</i>
+                                <a class="btn btn-danger btn-link btn-sm"
+                                   href="{{route('delete_employee', ['id' => $employee->id])}}">
+                                    <i class="material-icons">remove</i>
                                 </a>
                             </td>
                         </tr>
