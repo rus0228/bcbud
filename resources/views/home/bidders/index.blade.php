@@ -16,7 +16,7 @@
                 <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm" href="{{route('employee.add_bidder')}}">
                     <i class="material-icons">Manually Insert New Bidder</i>
                 </a>
-                <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm">
+                <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm" href="{{route('employee.export_bidder')}}">
                     <i class="material-icons">Download to excel</i>
                 </a>
             </div>
@@ -41,10 +41,10 @@
                             <td>{{$bidder->code}}</td>
                             <td>{{$bidder->code_valid_to}}</td>
                             <td>
-                                <a type="button" title="Edit" class="btn btn-primary btn-link btn-sm">
+                                <a class="btn btn-primary btn-link btn-sm" href="{{route('employee.edit_bidder', $bidder->id)}}">
                                     <i class="material-icons">edit</i>
                                 </a>
-                                <a type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <a class="btn btn-danger btn-link btn-sm"  href="{{route('employee.delete_bidder', $bidder->id)}}">
                                     <i class="material-icons">remove</i>
                                 </a>
                             </td>

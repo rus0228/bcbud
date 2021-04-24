@@ -49,14 +49,14 @@
                     <div class="form-group">
                         <div class="form-check form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="invoice_sent" value="1">
+                                <input class="form-check-input" type="radio" name="invoice_sent" value="1" required>
                                 Yes
                                 <span class="circle"><span class="check"></span></span>
                             </label>
                         </div>
                         <div class="form-check form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="invoice_sent" value="0">
+                                <input class="form-check-input" type="radio" name="invoice_sent" value="0" required>
                                 No
                                 <span class="circle"><span class="check"></span></span>
                             </label>
@@ -85,14 +85,14 @@
                     <div class="form-group">
                         <div class="form-check form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="ready_for_draw" value="1">
+                                <input class="form-check-input" type="radio" name="ready_for_draw" value="1" required>
                                 Yes
                                 <span class="circle"><span class="check"></span></span>
                             </label>
                         </div>
                         <div class="form-check form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="ready_for_draw" value="0">
+                                <input class="form-check-input" type="radio" name="ready_for_draw" value="0" required>
                                 No
                                 <span class="circle"><span class="check"></span></span>
                             </label>
@@ -101,10 +101,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="paid_manually" class="col-md-4 col-form-label text-md-right">{{ __('TicketsCreated') }}</label>
+                <label for="tickets_created" class="col-md-4 col-form-label text-md-right">{{ __('TicketsCreated') }}</label>
 
                 <div class="col-md-6">
-                    <input type="text" class="form-control" name="tickets_created" required autofocus>
+                    <input type="datetime-local" class="form-control" name="tickets_created" required autofocus>
                 </div>
             </div>
             <div class="form-group row mb-0">

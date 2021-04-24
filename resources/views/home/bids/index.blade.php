@@ -16,7 +16,7 @@
                 <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm" href="{{route('employee.add_bid')}}">
                     <i class="material-icons">Manually Insert New Bid</i>
                 </a>
-                <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm">
+                <a type="submit" title="Edit" class="btn btn-danger btn-link btn-sm" href="{{route('employee.export_bid')}}">
                     <i class="material-icons">Download to excel</i>
                 </a>
             </div>

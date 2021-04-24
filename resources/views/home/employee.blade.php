@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-md-12 text-center">
                                 <a href="{{route('employee.get_bidders')}}">
-                                    <h4>Biders list</h4>
+                                    <h4>Bidders list</h4>
                                 </a>
                             </div>
                             <div class="col-md-12 text-center">

@@ -51,14 +51,23 @@ Route::prefix('employee')
         Route::get('home', 'Home\EmployeeController@index')->name('home');
         Route::get('open_cars', 'Home\EmployeeController@get_open_cars')->name('open_cars');
         Route::post('import_cars', 'Home\EmployeeController@import_cars')->name('import_cars');
+        Route::get('publish_cars_present', 'Home\EmployeeController@publish_cars_present')->name('publish_cars_present');
+        Route::post('set_bidding_end_time', 'Home\EmployeeController@set_bidding_end_time')->name('set_bidding_end_time');
+        Route::post('set_estimated_draw_time', 'Home\EmployeeController@set_estimated_draw_time')->name('set_estimated_draw_time');
+
 
         Route::get('get_bidders', 'Home\EmployeeController@get_bidders')->name('get_bidders');
         Route::get('add_bidder', 'Home\EmployeeController@add_bidder')->name('add_bidder');
         Route::post('add_bidder', 'Home\EmployeeController@insert_bidder')->name('add_bidder');
+        Route::get('edit_bidder/{id}', 'Home\EmployeeController@edit_bidder')->name('edit_bidder');
+        Route::post('update_bidder', 'Home\EmployeeController@update_bidder')->name('update_bidder');
+        Route::get('delete_bidder/{id}', 'Home\EmployeeController@delete_bidder')->name('delete_bidder');
+        Route::get('export_bidder', 'Home\EmployeeController@export_bidder')->name('export_bidder');
 
         Route::get('get_bids', 'Home\EmployeeController@get_bids')->name('get_bids');
         Route::get('add_bid', 'Home\EmployeeController@add_bid')->name('add_bid');
         Route::post('add_bid', 'Home\EmployeeController@insert_bid')->name('add_bid');
+        Route::get('export_bid', 'Home\EmployeeController@export_bid')->name('export_bid');
 
     	Route::namespace('Auth\Login')
     		->group(function() {
@@ -67,3 +76,14 @@ Route::prefix('employee')
 				Route::post('logout', 'EmployeeController@logout')->name('logout');
     		});
 	});
+
+/**
+ * Define routes restful APIs for the mobile app of bidders
+ * We will implement access_token and other passports including sms code
+ */
+
+Route::get('getAvailableCarsForBid', [App\Http\Controllers\Api\BidderController::class, 'getAvailableCarsForBid']);
+
+Route::post('sendNewBids', [App\Http\Controllers\Api\BidderController::class, 'sendNewBids']);
+
+Route::post('regBidder', [App\Http\Controllers\Api\BidderController::class, 'regBidder']);

@@ -19,14 +19,14 @@
                 <label for="open_event" class="col-md-4 col-form-label text-md-right">{{ __('Open Event') }}</label>
 
                 <div class="col-md-6">
-                    <input id="open_event" type="text" class="form-control" name="open_event" required autofocus>
+                    <input id="open_event" type="datetime-local" class="form-control" name="open_event" required autofocus>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="close_event" class="col-md-4 col-form-label text-md-right">{{ __('Close Event') }}</label>
 
                 <div class="col-md-6">
-                    <input id="close_event" type="text" class="form-control" name="close_event" required autofocus>
+                    <input id="close_event" type="datetime-local" class="form-control" name="close_event" required autofocus>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                 <label for="preliminary_publish_list_time" class="col-md-4 col-form-label text-md-right">{{ __('PreliminaryPublishListTime') }}</label>
 
                 <div class="col-md-6">
-                    <input id="preliminary_publish_list_time" type="text" class="form-control" name="preliminary_publish_list_time" required autofocus>
+                    <input id="preliminary_publish_list_time" type="datetime-local" class="form-control" name="preliminary_publish_list_time" required autofocus>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                 <label for="bid_end_time" class="col-md-4 col-form-label text-md-right">{{ __('BidEndTime') }}</label>
 
                 <div class="col-md-6">
-                    <input id="bid_end_time" type="text" class="form-control" name="bid_end_time" required autofocus>
+                    <input id="bid_end_time" type="datetime-local" class="form-control" name="bid_end_time" required autofocus>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@
                 <label for="list_published_time" class="col-md-4 col-form-label text-md-right">{{ __('ListPublishedTime') }}</label>
 
                 <div class="col-md-6">
-                    <input id="list_published_time" type="text" class="form-control" name="list_published_time" required autofocus>
+                    <input id="list_published_time" type="datetime-local" class="form-control" name="list_published_time" required autofocus>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                 <label for="lottery_draw_time" class="col-md-4 col-form-label text-md-right">{{ __('LotteryDrawTime') }}</label>
 
                 <div class="col-md-6">
-                    <input id="lottery_draw_time" type="text" class="form-control" name="lottery_draw_time" required autofocus>
+                    <input id="lottery_draw_time" type="datetime-local" class="form-control" name="lottery_draw_time" required autofocus>
                 </div>
             </div>
 
