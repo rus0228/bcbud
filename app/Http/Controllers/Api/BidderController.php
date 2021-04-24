@@ -35,7 +35,7 @@ class BidderController extends Controller
                 'tickets_created' => '*'
             ]);
         }
-        $bids = DB::table('bids')->get();
+        $bids = DB::table('bids')->where('name', $input['bidder'])->get();
         return response()->json($bids);
     }
 
